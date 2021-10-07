@@ -11,7 +11,7 @@ import { HeroService } from '../services/HeroService';
 export class HeroesComponent implements OnInit {
   _heroes: Hero[] = []; // biến lưu giá trị.
 
-  constructor(private heroSV:HeroService) { }
+  constructor(public heroSV:HeroService) { }
 
   ngOnInit(): void {
     this.GetHeroes();

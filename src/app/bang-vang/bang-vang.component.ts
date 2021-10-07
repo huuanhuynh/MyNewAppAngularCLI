@@ -18,7 +18,7 @@ export class BangVangComponent implements OnInit {
 
   getHeroes(): void {
     this.heroSV.GetHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+      .subscribe(heroes => this.heroes = heroes.slice(1, 5));   // Lấy lên tất cả hero nhưng chỉ trả về từ 1 đến 5.
   }
 
 }

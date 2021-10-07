@@ -1,0 +1,9 @@
+<div *ngIf="hero"> <!--Nếu hero trong component.ts = null(undefine) thì không có gì hiện ra-->
+<h2>Chi tiết của: {{hero.name|uppercase}}</h2>
+<div><span>Mã số: </span>{{hero.id}}</div>
+<div>
+  <label for="hero-name">Tên anh hùng: </label>
+  <input id="hero-name"  [(ngModel)]="hero.name"  placeholder="Tên anh hùng" value="{{hero.name}}">
+</div>
+<button (click)="GoBack()">Quay lại</button>
+</div>

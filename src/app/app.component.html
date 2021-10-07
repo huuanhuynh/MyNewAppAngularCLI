@@ -1,10 +1,18 @@
 <h1>App Component</h1>
 <nav> <!--// chứa các tag <a></a> dẫn vào các component sẽ hiển thị vào router-outlet (dạng tabpage)-->
-  <a routerLink="bang-vang">Bảng vàng</a>
-  <a routerLink="heroes">Danh sách</a>
+  <a routerLink="/bang-vang">Bảng vàng</a>
+  <a routerLink="/heroes">Danh sách</a>
 </nav>
-<p>111111111111111111111111111</p>
+<p>Srart router-outlet</p>
 <router-outlet></router-outlet>
-<p>222222222222222222222222222</p>
+<p>End router-outlet</p>
+
+<p>Start message.</p>
 <!--Component tự tạo BottomMessage-->
-<app-bottom-message></app-bottom-message>
+<app-bottom-message></app-bottom-message>               <!--Cái này có hiển thị.-->
+<p>End message.</p>
+
+<!-- test
+<p>Test View component top-heroes and list-heroes</p>
+<app-bang-vang></app-bang-vang>
+-->
