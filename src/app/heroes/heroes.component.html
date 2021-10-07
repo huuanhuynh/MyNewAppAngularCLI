@@ -5,6 +5,11 @@
     <a routerLink="/hero-detail/{{hero.id}}">
       <span class="babge">{{hero.id}}</span>{{hero.name}}
     </a>
+    <button class="delete" (click)="DeleteClick(hero)">X</button>
   </li>
 </ul>
+
+<label for="new-hero">Nhập anh hùng:</label>
+<input id="new-hero" #txtHeroName>
+<button (click)="AddHeroClick(txtHeroName);">Thêm</button>
 

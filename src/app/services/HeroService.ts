@@ -7,6 +7,23 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class HeroService{
+
+  Delete(he: Hero) {
+    HeroData.splice(HeroData.indexOf(he), 1);
+    this.messageSV.Add("Đã xóa: " + he.name);
+  }
+
+  AddHero(name: string):void {
+    this.messageSV.Add("Start AddHero");
+    let maxID:number = 0;
+    HeroData.forEach(element => {
+      maxID=element.id>maxID?element.id:maxID;
+    });
+    maxID++;
+    const newHero = {id:maxID, name:name};
+    HeroData.push(newHero);
+    this.messageSV.Add("End AddHero: " + newHero.name);
+  }
   constructor(public messageSV:MessageService){}   // biến trong tham số contructor sẽ dùng được trong các hàm.
 
   GetHeroes() : Observable<Hero[]>{  // định nghĩa hàm GetHeros trả về Observable<Hero[]>

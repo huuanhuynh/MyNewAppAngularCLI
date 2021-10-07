@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../shared/Hero';
 import { HeroService } from '../services/HeroService';
 
@@ -19,5 +19,14 @@ export class HeroesComponent implements OnInit {
 
   GetHeroes():void{
     this.heroSV.GetHeroes().subscribe(ketqua => this._heroes = ketqua);
+  }
+
+  DeleteClick(h:Hero){
+    this.heroSV.Delete(h);
+  }
+
+  AddHeroClick(txt:HTMLInputElement):void{
+    this.heroSV.AddHero(txt.value);
+    txt.value = "";
   }
 }
