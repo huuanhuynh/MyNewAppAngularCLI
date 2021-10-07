@@ -1,0 +1,7 @@
+<p>bottom-message works!</p>
+<div *ngIf="messageService._message.length">
+<h2>Có {{messageService._message.length}} thông báo</h2>
+<button (click)="messageService.Clear()">Xóa thông báo</button>
+<!-- Vẽ nội dung bằng for -->
+<div *ngFor="let m of messageService._message">{{m}}</div>
+</div>

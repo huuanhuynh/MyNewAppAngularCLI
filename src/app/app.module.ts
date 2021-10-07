@@ -3,16 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyNewComponentComponent } from './my-new-component/my-new-component.component';
+
+// Enable HTTP
+//import { HttpClientModule } from '@angular/common/http';
+
+import { BottomMessageComponent } from './bottom-message/bottom-message.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { BangVangComponent } from './bang-vang/bang-vang.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyNewComponentComponent
+    BottomMessageComponent,
+    HeroesComponent,
+    BangVangComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
